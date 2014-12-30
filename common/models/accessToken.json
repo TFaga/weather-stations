@@ -1,0 +1,11 @@
+{
+  "name": "accessToken",
+  "base": "AccessToken",
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    }
+  }
+}

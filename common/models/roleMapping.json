@@ -1,0 +1,11 @@
+{
+  "name": "roleMapping",
+  "base": "RoleMapping",
+  "relations": {
+    "role": {
+      "type": "belongsTo",
+      "model": "role",
+      "foreignKey": "roleId"
+    }
+  }
+}

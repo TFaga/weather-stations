@@ -7,23 +7,23 @@
       "./models"
     ]
   },
-  "User": {
+  "accessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "acl": {
+    "dataSource": "db",
+    "public": false
+  },
+  "roleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "user": {
     "dataSource": "db"
-  },
-  "AccessToken": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "db",
-    "public": false
   }
 }
