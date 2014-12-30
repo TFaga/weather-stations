@@ -1,6 +1,9 @@
 {
   "db": {
-    "name": "db",
-    "connector": "memory"
+    "connector": "mssql",
+    "host": "localhost",
+    "database": "vremenske",
+    "username": "sa",
+    "password": "sa"
   }
 }
