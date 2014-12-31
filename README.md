@@ -27,6 +27,16 @@ Set up a database of your choice (PostgreSQL, MySQL, Oracle, MSSQL or MongoDb) a
 ```
 The required settings for a specific database can be found [here](http://docs.strongloop.com/display/LB/Database+connectors).
 
+Run database migrations:
+```
+node server/scripts/migrate
+```
+
+Seed initial data to the database:
+```
+node server/scripts/seed
+```
+
 To start the application:
 ```
 grunt serve
