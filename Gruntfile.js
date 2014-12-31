@@ -69,7 +69,7 @@ module.exports = function (grunt) {
                 'server/{,*/}*.js'
             ]
         }
-    })
+    });
 
     grunt.registerTask('serve', [
 		'connect:livereload',
