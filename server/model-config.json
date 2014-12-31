@@ -25,5 +25,9 @@
   },
   "user": {
     "dataSource": "db"
+  },
+  "station": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -1,0 +1,210 @@
+{
+  "name": "station",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "mssql": {
+      "table": "VREMENSKEPOSTAJE"
+    }
+  },
+  "properties": {
+  	"id": {
+      "type": "Number",
+      "required": true,
+      "id": true,
+      "mssql": {
+        "columnName": "ID",
+        "dataType": "int",
+        "nullable": "NO"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mssql": {
+        "columnName": "NAME",
+        "dataType": "nvarchar",
+        "dataLength": 50,
+        "nullable": "YES"
+      }
+    },
+    "description": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mssql": {
+        "columnName": "DESCRIPTION",
+        "dataType": "nvarchar",
+        "dataLength": 50,
+        "nullable": "YES"
+      }
+    },
+    "com": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mssql": {
+        "columnName": "COM",
+        "dataType": "nvarchar",
+        "dataLength": 50,
+        "nullable": "YES"
+      }
+    },
+    "baudrate": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mssql": {
+        "columnName": "BAUDRATE",
+        "dataType": "nvarchar",
+        "dataLength": 50,
+        "nullable": "YES"
+      }
+    },
+    "visible": {
+      "type": "String",
+      "required": false,
+      "length": 1,
+      "mssql": {
+        "columnName": "VISIBLE",
+        "dataType": "nchar",
+        "dataLength": 1,
+        "nullable": "YES"
+      }
+    },
+    "coordinate_x": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "COORDINATE_X",
+        "dataType": "real",
+        "nullable": "YES"
+      }
+    },
+    "coordinate_y": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "COORDINATE_Y",
+        "dataType": "real",
+        "nullable": "YES"
+      }
+    },
+    "vp": {
+      "type": "Boolean",
+      "required": false,
+      "mssql": {
+        "columnName": "VP",
+        "dataType": "bit",
+        "nullable": "YES"
+      }
+    },
+    "kameras": {
+      "type": "String",
+      "required": false,
+      "length": 200,
+      "mssql": {
+        "columnName": "KAMERAS",
+        "dataType": "nvarchar",
+        "dataLength": 200,
+        "nullable": "YES"
+      }
+    },
+    "odsek": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "mssql": {
+        "columnName": "ODSEK",
+        "dataType": "nchar",
+        "dataLength": 10,
+        "nullable": "YES"
+      }
+    },
+    "stac": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "STAC",
+        "dataType": "int",
+        "nullable": "YES"
+      }
+    },
+    "nmv": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "NMV",
+        "dataType": "int",
+        "nullable": "YES"
+      }
+    },
+    "tip_kamere": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mssql": {
+        "columnName": "TIP_KAMERE",
+        "dataType": "nchar",
+        "dataLength": 50,
+        "nullable": "YES"
+      }
+    },
+    "ip_naslov": {
+      "type": "String",
+      "required": false,
+      "length": 20,
+      "mssql": {
+        "columnName": "IP_NASLOV",
+        "dataType": "nchar",
+        "dataLength": 20,
+        "nullable": "YES"
+      }
+    },
+    "orientacija": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "ORIENTACIJA",
+        "dataType": "int",
+        "nullable": "YES"
+      }
+    },
+    "opombe": {
+      "type": "String",
+      "required": false,
+      "length": 1000,
+      "mssql": {
+        "columnName": "OPOMBE",
+        "dataType": "nvarchar",
+        "dataLength": 1000,
+        "nullable": "YES"
+      }
+    },
+    "ping_cas": {
+      "type": "Date",
+      "required": false,
+      "mssql": {
+        "columnName": "PING_CAS",
+        "dataType": "datetime",
+        "nullable": "YES"
+      }
+    },
+    "ping_status": {
+      "type": "String",
+      "required": false,
+      "length": 50,
+      "mssql": {
+        "columnName": "PING_STATUS",
+        "dataType": "nvarchar",
+        "dataLength": 50,
+        "nullable": "YES"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
