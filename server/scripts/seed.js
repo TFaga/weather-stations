@@ -2,8 +2,8 @@
 
 var app = require('../server'),
 	loopback = require('loopback'),
-	User = loopback.getModel("user"),
-	Role = loopback.getModel("role");
+	User = loopback.getModel('user'),
+	Role = loopback.getModel('role');
 
 User.findOrCreate(
 	{where: {email: 'tilen.faganel@me.com' }},
@@ -22,5 +22,5 @@ User.findOrCreate(
 
 		process.exit(0);
 	}
-)
+);
 

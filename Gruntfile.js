@@ -58,14 +58,25 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: [
+                'Gruntfile.js',
+                'server/{,*/}*.js'
+            ]
         }
-    });
+    })
 
-    grunt.registerTask('serve', function (target) {
+    grunt.registerTask('serve', [
+		'connect:livereload',
+        'watch'
+    ]);
 
-        grunt.task.run([
-            'connect:livereload',
-            'watch'
-        ]);
-    });
-}
+    grunt.registerTask('test', [
+    	'jshint'
+    ]);
+};
