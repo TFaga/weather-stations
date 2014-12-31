@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "./node_modules/grunt-cli/bin/grunt serve",
-    "test": "./node_modules/grunt-cli/bin/grunt test"
+    "test": "./node_modules/grunt-cli/bin/grunt test",
+    "build": "./node_modules/grunt-cli/bin/grunt build"
   },
   "keywords": [
     "weather",
