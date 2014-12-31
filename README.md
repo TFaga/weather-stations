@@ -1,4 +1,5 @@
 # Weather Stations
+[![Build Status](https://img.shields.io/travis/TFaga/weather-stations/master.svg?style=flat)](https://travis-ci.org/TFaga/weather-stations)
 
 > View detailed information from weather stations located all around Slovenia.
 
