@@ -29,5 +29,9 @@
   "station": {
     "dataSource": "db",
     "public": true
+  },
+  "measurement": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -8,10 +8,10 @@
     }
   },
   "properties": {
-  	"id": {
+    "ID": {
       "type": "Number",
-      "required": true,
       "id": true,
+      "required": true,
       "mssql": {
         "columnName": "ID",
         "dataType": "int",
@@ -204,7 +204,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "measurements": {
+      "type": "hasMany",
+      "model": "measurement",
+      "foreignKey": "IDPOSTAJE"
+    }
+  },
   "acls": [],
   "methods": []
 }

@@ -1,0 +1,173 @@
+{
+  "name": "measurement",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "mssql": {
+      "table": "PODATKI"
+    }
+  },
+  "properties": {
+  	"ID": {
+      "type": "Number",
+      "id": true,
+      "required": true,
+      "mssql": {
+        "columnName": "ID",
+        "dataType": "int",
+        "nullable": "NO"
+      }
+    },
+    "IDPOSTAJE": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "IDPOSTAJE",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "times": {
+      "type": "Date",
+      "required": true,
+      "mssql": {
+        "columnName": "TIMES",
+        "dataType": "datetime",
+        "nullable": "NO"
+      }
+    },
+    "dates": {
+      "type": "String",
+      "required": true,
+      "length": 10,
+      "mssql": {
+        "columnName": "DATES",
+        "dataType": "nchar",
+        "dataLength": 10,
+        "nullable": "NO"
+      }
+    },
+    "direction": {
+      "type": "String",
+      "required": true,
+      "length": 10,
+      "mssql": {
+        "columnName": "DIRECTION",
+        "dataType": "nchar",
+        "dataLength": 10,
+        "nullable": "NO"
+      }
+    },
+    "speed_kh": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "SPEED_KH",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "aux_c": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "AUX_C",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "tindoor_c": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "TINDOOR_C",
+        "dataType": "smallint",
+        "nullable": "YES"
+      }
+    },
+    "toutdoor_c": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "TOUTDOOR_C",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "humidity_%": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "HUMIDITY_%",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "pressure": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "PRESSURE",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "pressure_t": {
+      "type": "String",
+      "length": 10,
+      "required": false,
+      "mssql": {
+        "columnName": "PRESSURE_T",
+        "dataType": "nchar",
+        "dataLength": 10,
+        "nullable": "YES"
+      }
+    },
+    "dailyrain_mm": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "DAILYRAIN_MM",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "monthlyrain_mm": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "MONTHLYRAIN_MM",
+        "dataType": "smallint",
+        "nullable": "NO"
+      }
+    },
+    "rainfallrate_mm": {
+      "type": "Number",
+      "required": false,
+      "mssql": {
+        "columnName": "RAINFALLRATE_MM",
+        "dataType": "smallint",
+        "nullable": "YES"
+      }
+    },
+    "td": {
+      "type": "Number",
+      "required": true,
+      "mssql": {
+        "columnName": "TD",
+        "dataType": "float",
+        "nullable": "NO"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+  	"station": {
+      "type": "belongsTo",
+      "model": "station",
+      "foreignKey": "IDPOSTAJE"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
