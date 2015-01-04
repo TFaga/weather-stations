@@ -11,196 +11,90 @@
     "ID": {
       "type": "Number",
       "id": true,
-      "required": true,
-      "mssql": {
-        "columnName": "ID",
-        "dataType": "int",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "name": {
+    "NAME": {
       "type": "String",
       "required": false,
-      "length": 50,
-      "mssql": {
-        "columnName": "NAME",
-        "dataType": "nvarchar",
-        "dataLength": 50,
-        "nullable": "YES"
-      }
+      "length": 50
     },
-    "description": {
+    "DESCRIPTION": {
       "type": "String",
       "required": false,
-      "length": 50,
-      "mssql": {
-        "columnName": "DESCRIPTION",
-        "dataType": "nvarchar",
-        "dataLength": 50,
-        "nullable": "YES"
-      }
+      "length": 50
     },
-    "com": {
+    "COM": {
       "type": "String",
       "required": false,
-      "length": 50,
-      "mssql": {
-        "columnName": "COM",
-        "dataType": "nvarchar",
-        "dataLength": 50,
-        "nullable": "YES"
-      }
+      "length": 50
     },
-    "baudrate": {
+    "BAUDRATE": {
       "type": "String",
       "required": false,
-      "length": 50,
-      "mssql": {
-        "columnName": "BAUDRATE",
-        "dataType": "nvarchar",
-        "dataLength": 50,
-        "nullable": "YES"
-      }
+      "length": 50
     },
-    "visible": {
+    "VISIBLE": {
       "type": "String",
       "required": false,
-      "length": 1,
-      "mssql": {
-        "columnName": "VISIBLE",
-        "dataType": "nchar",
-        "dataLength": 1,
-        "nullable": "YES"
-      }
+      "length": 1
     },
-    "coordinate_x": {
+    "COORDINATE_X": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "COORDINATE_X",
-        "dataType": "real",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "coordinate_y": {
+    "COORDINATE_Y": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "COORDINATE_Y",
-        "dataType": "real",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "vp": {
+    "VP": {
       "type": "Boolean",
-      "required": false,
-      "mssql": {
-        "columnName": "VP",
-        "dataType": "bit",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "kameras": {
+    "KAMERAS": {
       "type": "String",
       "required": false,
-      "length": 200,
-      "mssql": {
-        "columnName": "KAMERAS",
-        "dataType": "nvarchar",
-        "dataLength": 200,
-        "nullable": "YES"
-      }
+      "length": 200
     },
-    "odsek": {
+    "ODSEK": {
       "type": "String",
       "required": false,
-      "length": 10,
-      "mssql": {
-        "columnName": "ODSEK",
-        "dataType": "nchar",
-        "dataLength": 10,
-        "nullable": "YES"
-      }
+      "length": 10
     },
-    "stac": {
+    "STAC": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "STAC",
-        "dataType": "int",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "nmv": {
+    "NMV": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "NMV",
-        "dataType": "int",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "tip_kamere": {
+    "TIP_KAMERE": {
       "type": "String",
       "required": false,
-      "length": 50,
-      "mssql": {
-        "columnName": "TIP_KAMERE",
-        "dataType": "nchar",
-        "dataLength": 50,
-        "nullable": "YES"
-      }
+      "length": 50
     },
-    "ip_naslov": {
+    "IP_NASLOV": {
       "type": "String",
       "required": false,
-      "length": 20,
-      "mssql": {
-        "columnName": "IP_NASLOV",
-        "dataType": "nchar",
-        "dataLength": 20,
-        "nullable": "YES"
-      }
+      "length": 20
     },
-    "orientacija": {
+    "ORIENTACIJA": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "ORIENTACIJA",
-        "dataType": "int",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "opombe": {
+    "OPOMBE": {
       "type": "String",
       "required": false,
-      "length": 1000,
-      "mssql": {
-        "columnName": "OPOMBE",
-        "dataType": "nvarchar",
-        "dataLength": 1000,
-        "nullable": "YES"
-      }
+      "length": 1000
     },
-    "ping_cas": {
+    "PING_CAS": {
       "type": "Date",
-      "required": false,
-      "mssql": {
-        "columnName": "PING_CAS",
-        "dataType": "datetime",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "ping_status": {
+    "PING_STATUS": {
       "type": "String",
       "required": false,
-      "length": 50,
-      "mssql": {
-        "columnName": "PING_STATUS",
-        "dataType": "nvarchar",
-        "dataLength": 50,
-        "nullable": "YES"
-      }
+      "length": 50
     }
   },
   "validations": [],

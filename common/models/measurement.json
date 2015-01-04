@@ -11,153 +11,70 @@
   	"ID": {
       "type": "Number",
       "id": true,
-      "required": true,
-      "mssql": {
-        "columnName": "ID",
-        "dataType": "int",
-        "nullable": "NO"
-      }
+      "required": true
     },
     "IDPOSTAJE": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "IDPOSTAJE",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "times": {
+    "TIMES": {
       "type": "Date",
-      "required": true,
-      "mssql": {
-        "columnName": "TIMES",
-        "dataType": "datetime",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "dates": {
+    "DATES": {
       "type": "String",
       "required": true,
-      "length": 10,
-      "mssql": {
-        "columnName": "DATES",
-        "dataType": "nchar",
-        "dataLength": 10,
-        "nullable": "NO"
-      }
+      "length": 10
     },
-    "direction": {
+    "DIRECTION": {
       "type": "String",
       "required": true,
-      "length": 10,
-      "mssql": {
-        "columnName": "DIRECTION",
-        "dataType": "nchar",
-        "dataLength": 10,
-        "nullable": "NO"
-      }
+      "length": 10
     },
-    "speed_kh": {
+    "SPEED_KH": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "SPEED_KH",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "aux_c": {
+    "AUX_C": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "AUX_C",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "tindoor_c": {
+    "TINDOOR_C": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "TINDOOR_C",
-        "dataType": "smallint",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "toutdoor_c": {
+    "TOUTDOOR_C": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "TOUTDOOR_C",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "humidity_%": {
+    "HUMIDITY_%": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "HUMIDITY_%",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "pressure": {
+    "PRESSURE": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "PRESSURE",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "pressure_t": {
+    "PRESSURE_T": {
       "type": "String",
       "length": 10,
-      "required": false,
-      "mssql": {
-        "columnName": "PRESSURE_T",
-        "dataType": "nchar",
-        "dataLength": 10,
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "dailyrain_mm": {
+    "DAILYRAIN_MM": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "DAILYRAIN_MM",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "monthlyrain_mm": {
+    "MONTHLYRAIN_MM": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "MONTHLYRAIN_MM",
-        "dataType": "smallint",
-        "nullable": "NO"
-      }
+      "required": true
     },
-    "rainfallrate_mm": {
+    "RAINFALLRATE_MM": {
       "type": "Number",
-      "required": false,
-      "mssql": {
-        "columnName": "RAINFALLRATE_MM",
-        "dataType": "smallint",
-        "nullable": "YES"
-      }
+      "required": false
     },
-    "td": {
+    "TD": {
       "type": "Number",
-      "required": true,
-      "mssql": {
-        "columnName": "TD",
-        "dataType": "float",
-        "nullable": "NO"
-      }
+      "required": true
     }
   },
   "validations": [],
