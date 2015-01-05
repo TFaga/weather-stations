@@ -14,8 +14,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "./node_modules/grunt-cli/bin/grunt serve",
+    "start": "node server/server.js",
     "test": "./node_modules/grunt-cli/bin/grunt test",
+    "serve": "./node_modules/grunt-cli/bin/grunt serve",
     "build": "./node_modules/grunt-cli/bin/grunt build"
   },
   "keywords": [
