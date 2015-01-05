@@ -2,7 +2,7 @@
   "db": {
     "connector": "mssql",
     "host": "localhost",
-    "database": "vremenske",
+    "database": "weather",
     "username": "sa",
     "password": "sa"
   }
