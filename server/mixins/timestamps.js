@@ -1,4 +1,4 @@
-module.exports = function timestamps(Model, options) {
+module.exports = function timestamps(Model) {
   
   Model.defineProperty('createdAt', { type: 'date' });
   Model.defineProperty('updatedAt', { type: 'date' });
