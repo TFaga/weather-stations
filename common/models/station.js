@@ -1,5 +1,7 @@
 module.exports = function(Station) {
 
+	require('../../server/mixins/maxlimit')(Station, 100);
+
 	Station.disableRemoteMethod('create', true);
 	Station.disableRemoteMethod('deleteById', true);
 	Station.disableRemoteMethod('upsert', true);
