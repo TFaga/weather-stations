@@ -2,7 +2,7 @@
 
 var app = require('../server');
 
-app.dataSources.db.autoupdate(null, function(err, result) {
+app.dataSources.db.autoupdate(['accessToken', 'acl', 'roleMapping', 'role', 'user'], function(err, result) {
 
 	if (err) {
 		console.log(err);

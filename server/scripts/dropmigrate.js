@@ -2,7 +2,7 @@
 
 var app = require('../server');
 
-app.dataSources.db.automigrate(function(err, result) {
+app.dataSources.db.automigrate(['accessToken', 'acl', 'roleMapping', 'role', 'user'], function(err, result) {
 
 	if (err) {
 		console.log(err);
