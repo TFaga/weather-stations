@@ -1,5 +1,5 @@
 module.exports = function maxlimit(Model, limit) {
-  
+
   Model.beforeRemote('prototype.*', function(ctx, model, next) {
 
     if (ctx.methodString.indexOf('__get__') > -1) {
