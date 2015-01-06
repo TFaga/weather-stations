@@ -1,6 +1,12 @@
 language: node_js
+env:
+  global:
+  - secure: T18VdUHRmbJdcclW1zFcfRMY7Y2evX9aTuykaVd7t4a+xrxr3+aOo74hqN//QaelbWfuOI3jSMY1YPx3cWl2Ps0UVjZlBT5mfxyZFE9vJC92OhkBH2dWpXez1cRSTUC3aER7AHW2g8CelJwIVrOWqzQeMdc/TblfV308jwDzlIs=
+  - secure: b1A46V2myJdTewgV8aYTlL1pAh8StL0cNJakDhK6KCizj5JKJr4aLGsgRJf/Y6CLTzt8cToXqmt/0a0GgetULrWptBSiIEdMQAYNqJX213yURrGntrWxEGz1EGbgIqE+ILJcrUp5+BvOG1rDAJ1pdO+VqVVuTI/bS67D13ztWks=
+  - secure: YSHy3u4lBNiDvFsKA3VcbQHRtwpZCB+hhohCEFIBYitECrq6QkNfVV0TF5y83QMvZiY/IbZbWYLm0cHotBPgbKF8v6ulddUuojkqIg31b+52awzNb8Ni7rKiyuF36S7cNaPOIlcUfJVrqiGmeKiWA0MbrfekyFBhocsndTjgBDY=
 node_js:
 - '0.10'
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
+after_success: bash ./server/scripts/deploy.sh

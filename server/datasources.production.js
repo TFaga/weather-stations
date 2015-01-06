@@ -7,6 +7,6 @@ module.exports = {
     password: process.env.DB_PASS,
     options: {
 	   encrypt: true
-	}
+	  }
   }
 };
