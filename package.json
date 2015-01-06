@@ -1,6 +1,6 @@
 {
   "name": "weather-stations",
-  "version": "0.0.0",
+  "version": "v1.0.0-beta.1",
   "description": "View detailed information from weather stations located all around Slovenia.",
   "license": "MIT",
   "main": "server/server.js",
