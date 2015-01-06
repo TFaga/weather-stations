@@ -10,5 +10,5 @@ if [[ $TRAVIS_TAG != "" && $TRAVIS_PULL_REQUEST == "false" ]];then
 
 	git checkout -b deploy $TRAVIS_TAG
 
-	git push -f azure deploy:master;
+	git push -f azure deploy:master > /dev/null;
 fi
