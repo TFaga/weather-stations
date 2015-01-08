@@ -1,6 +1,9 @@
 {
   "name": "roleMapping",
   "base": "RoleMapping",
+  "properties": {
+    "principalId": "Number"
+  },
   "relations": {
     "role": {
       "type": "belongsTo",
