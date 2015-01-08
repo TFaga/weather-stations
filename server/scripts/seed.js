@@ -12,8 +12,7 @@ User.findOrCreate(
 		firstname: 'Tilen',
 		lastname: 'Faganel',
 		email: 'tilen.faganel@me.com',
-		password: '123456',
-		emailVerified: true
+		password: '123456'
 	},
 	function(err, user) {
 		if(err) throw err;
