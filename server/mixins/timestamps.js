@@ -1,7 +1,7 @@
 module.exports = function timestamps(Model) {
 
-  Model.defineProperty('createdAt', { type: 'date' });
-  Model.defineProperty('updatedAt', { type: 'date' });
+  Model.defineProperty('created', { type: 'date' });
+  Model.defineProperty('modified', { type: 'date' });
 
   var originalBeforeSave = Model.beforeSave;
   Model.beforeSave = function(next, data) {
@@ -14,14 +14,14 @@ module.exports = function timestamps(Model) {
   };
 
   Model.applyTimestamps = function(data, creation) {
-    data.updatedAt = new Date();
-    if (creation) data.createdAt = data.updatedAt;
+    data.modified = new Date();
+    if (creation) data.created = data.modified;
   };
 
   Model.removeCreatedProperty = function(ctx, model, next) {
     var body = ctx.req.body;
-    if (body && body.createdAt) {
-      delete body.createdAt;
+    if (body && body.created) {
+      delete body.created;
     }
     next();
   };
