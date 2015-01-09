@@ -8,4 +8,5 @@ module.exports = function(User) {
 
   User.disableRemoteMethod('__create__accessTokens', false);
   User.disableRemoteMethod('__updateById__accessTokens', false);
+  User.disableRemoteMethod('__updateById__roles', false);
 };
