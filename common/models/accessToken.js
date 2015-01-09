@@ -1,5 +1,7 @@
 module.exports = function(AccessToken) {
 
+  AccessToken.validatesLengthOf('ttl', {max: 2419200, message: {max: 'is too big'}});
+
   AccessToken.findForRequest = function(req, options, cb) {
     if (cb === undefined && typeof options === 'function') {
       cb = options;
