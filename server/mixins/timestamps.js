@@ -24,7 +24,7 @@ module.exports = function timestamps(Model) {
       delete body.createdAt;
     }
     next();
-  }
+  };
 
   Model.beforeRemote('upsert', Model.removeCreatedProperty);
   Model.beforeRemote('updateAll', Model.removeCreatedProperty);
