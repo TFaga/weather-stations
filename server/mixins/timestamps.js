@@ -17,4 +17,16 @@ module.exports = function timestamps(Model) {
     data.updatedAt = new Date();
     if (creation) data.createdAt = data.updatedAt;
   };
+
+  Model.removeCreatedProperty = function(ctx, model, next) {
+    var body = ctx.req.body;
+    if (body && body.createdAt) {
+      delete body.createdAt;
+    }
+    next();
+  }
+
+  Model.beforeRemote('upsert', Model.removeCreatedProperty);
+  Model.beforeRemote('updateAll', Model.removeCreatedProperty);
+  Model.beforeRemote('prototype.updateAttributes', Model.removeCreatedProperty);
 };
