@@ -1,6 +1,13 @@
 {
   "name": "role",
   "base": "Role",
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "index": { "unique": true }
+    }
+  },
   "relations": {
     "principals": {
       "type": "hasMany",

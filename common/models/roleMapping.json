@@ -10,5 +10,11 @@
       "model": "role",
       "foreignKey": "roleId"
     }
+  },
+  "indexes": {
+    "role_entity_index": {
+      "columns": "principalType, principalId, roleId",
+      "unique": true
+    }
   }
 }
