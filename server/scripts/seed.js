@@ -3,7 +3,7 @@
 var app = require('../server'),
 	loopback = require('loopback'),
 	User = loopback.getModel('user'),
-	Role = loopback.getModel('role')
+	Role = loopback.getModel('role'),
   RoleMapping = loopback.getModel('roleMapping');
 
 User.findOrCreate(
@@ -55,7 +55,7 @@ User.findOrCreate(
               process.exit(0);
             }
           }
-        )
+        );
       }
     );
   }
