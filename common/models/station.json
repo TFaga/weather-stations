@@ -15,8 +15,7 @@
     },
     "NAME": {
       "type": "String",
-      "required": false,
-      "length": 50
+      "required": false
     },
     "DESCRIPTION": {
       "type": "String",
@@ -25,18 +24,15 @@
     },
     "COM": {
       "type": "String",
-      "required": false,
-      "length": 50
+      "required": false
     },
     "BAUDRATE": {
       "type": "String",
-      "required": false,
-      "length": 50
+      "required": false
     },
     "VISIBLE": {
       "type": "String",
-      "required": false,
-      "length": 1
+      "required": false
     },
     "COORDINATE_X": {
       "type": "Number",
@@ -52,8 +48,7 @@
     },
     "KAMERAS": {
       "type": "String",
-      "required": false,
-      "length": 200
+      "required": false
     },
     "ODSEK": {
       "type": "String",
@@ -70,13 +65,11 @@
     },
     "TIP_KAMERE": {
       "type": "String",
-      "required": false,
-      "length": 50
+      "required": false
     },
     "IP_NASLOV": {
       "type": "String",
-      "required": false,
-      "length": 20
+      "required": false
     },
     "ORIENTACIJA": {
       "type": "Number",
@@ -84,8 +77,7 @@
     },
     "OPOMBE": {
       "type": "String",
-      "required": false,
-      "length": 1000
+      "required": false
     },
     "PING_CAS": {
       "type": "Date",
@@ -93,8 +85,7 @@
     },
     "PING_STATUS": {
       "type": "String",
-      "required": false,
-      "length": 50
+      "required": false
     }
   },
   "validations": [],

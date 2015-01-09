@@ -28,8 +28,7 @@
     },
     "DIRECTION": {
       "type": "String",
-      "required": true,
-      "length": 10
+      "required": true
     },
     "SPEED_KH": {
       "type": "Number",
@@ -57,7 +56,6 @@
     },
     "PRESSURE_T": {
       "type": "String",
-      "length": 10,
       "required": false
     },
     "DAILYRAIN_MM": {
