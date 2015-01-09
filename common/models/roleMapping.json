@@ -2,11 +2,17 @@
   "name": "roleMapping",
   "base": "RoleMapping",
   "properties": {
-    "principalId": "Number",
+    "principalId": {
+      "type":"number",
+      "required": true
+    },
     "principalType": {
       "type": "string",
       "default": "USER",
       "description": "The principal type, such as user, application, or role"
+    },
+    "roleId": {
+      "required": true
     }
   },
   "relations": {
