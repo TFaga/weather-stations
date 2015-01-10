@@ -1,11 +1,11 @@
-module.exports = function validateReference(Model, property, relModel, msg) {
+module.exports = function validateReference(Model, options) {
 
   var loopback = require('loopback');
 
-  Model.validateAsync(property, function(err, done) {
-    loopback.getModel(relModel).findById(this[property], function(error, res) {
+  Model.validateAsync(options.property, function(err, done) {
+    loopback.getModel(options.relModel).findById(this[options.property], function(error, res) {
       if (error || !res) err();
       done();
     });
-  }, {message: msg, code: 'exist'});
+  }, {message: options.message, code: 'exist'});
 };
