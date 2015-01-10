@@ -8,7 +8,9 @@ if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_T
 
   git remote add azure https://$AZ_USER:$AZ_PASS@$AZ_STAGING.scm.azurewebsites.net:443/$AZ_STAGING.git;
 
-  git push -f azure master > /dev/null;
+  git checkout -b deploy
+
+  git push -f azure deploy:master > /dev/null;
 fi
 
 # Deploy to beta server
