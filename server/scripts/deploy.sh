@@ -10,7 +10,7 @@ if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_T
 
   git checkout -b deploy
 
-  git push -f azure deploy:master > /dev/null;
+  git push -fq azure deploy:master > /dev/null;
 fi
 
 # Deploy to beta server
@@ -20,5 +20,5 @@ if [[ $TRAVIS_TAG != "" && $TRAVIS_PULL_REQUEST == "false" ]];then
 
 	git checkout -b deploy $TRAVIS_TAG
 
-	git push -f azure deploy:master > /dev/null;
+	git push -fq azure deploy:master > /dev/null;
 fi
