@@ -12,4 +12,17 @@ module.exports = function(Station) {
 	Station.disableRemoteMethod('__delete__measurements', false);
 	Station.disableRemoteMethod('__destroyById__measurements', false);
 	Station.disableRemoteMethod('__updateById__measurements', false);
+
+  Station.beforeRemote('prototype.__get__measurements', function(ctx, station, next) {
+
+    if (!ctx.req.accessToken) {
+
+      ctx.args.filter = ctx.args.filter || {};
+
+      ctx.args.filter.limit = 1;
+      ctx.args.filter.order = 'TIMES DESC'
+    }
+
+    next();
+  });
 };
