@@ -19,7 +19,7 @@ module.exports = function maxlimit(Model, limit) {
 
   Model.maxLimit = function(ctx) {
 
-    if (typeof ctx.args.filter == 'string') {
+    if (typeof ctx.args.filter == 'string') { // jshint ignore:line
       try {
         ctx.args.filter = JSON.parse(ctx.args.filter);
       } catch(e) {}
@@ -27,12 +27,12 @@ module.exports = function maxlimit(Model, limit) {
 
     if (ctx.args.filter) {
 
-      if ((!ctx.args.filter.limit || ctx.args.filter.limit > limit) && typeof ctx.args.filter != 'string') {
+      if ((!ctx.args.filter.limit || ctx.args.filter.limit > limit) && typeof ctx.args.filter != 'string') { // jshint ignore:line
         ctx.args.filter.limit = limit;
       }
 
     } else {
       ctx.args.filter = { limit: limit };
     }
-  }
+  };
 };

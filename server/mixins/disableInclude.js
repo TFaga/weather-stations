@@ -2,7 +2,7 @@ module.exports = function disableInclude(Model) {
 
   Model.beforeRemote('**', function(ctx, station, next) {
 
-    if (typeof ctx.args.filter == 'string') {
+    if (typeof ctx.args.filter == 'string') { // jshint ignore:line
       try {
         ctx.args.filter = JSON.parse(ctx.args.filter);
       } catch(e) {}
