@@ -1,5 +1,6 @@
 {
   "restApiRoot": "/api",
+  "aclErrorStatus": 403,
   "remoting": {
     "context": {
       "enableHttpContext": true
