@@ -1,6 +1,7 @@
 module.exports = function(Station) {
 
 	require('../../server/mixins/maxlimit')(Station, 100);
+  require('../../server/mixins/disableInclude')(Station);
 
 	Station.disableRemoteMethod('create', true);
 	Station.disableRemoteMethod('deleteById', true);

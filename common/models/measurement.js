@@ -1,6 +1,7 @@
 module.exports = function(Measurement) {
 
 	require('../../server/mixins/maxlimit')(Measurement, 100);
+  require('../../server/mixins/disableInclude')(Measurement);
 
 	Measurement.disableRemoteMethod('create', true);
 	Measurement.disableRemoteMethod('deleteById', true);
