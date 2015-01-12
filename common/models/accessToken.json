@@ -9,6 +9,9 @@
     "id": {
       "type": "string",
       "index": { "unique": true }
+    },
+    "userId": {
+      "index": true
     }
   },
   "relations": {
