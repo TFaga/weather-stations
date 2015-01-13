@@ -23,6 +23,7 @@ app.start = function() {
   // start the web server
   return app.listen(process.env.PORT || 3000, function() {
     app.emit('started');
+    console.info('Application started');
     console.info('Web server listening at: %s', app.get('url'));
   });
 };
