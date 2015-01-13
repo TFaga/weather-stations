@@ -8,8 +8,6 @@ logger.remove(winston.transports.Console)
 
 if (process.env.NODE_ENV === 'production') {
   logger.add(azureLogger, {
-    account: process.env.AZURE_STORAGE_ACCOUNT,
-    key: process.env.AZURE_STORAGE_ACCESS_KEY,
     level: 'silly',
     tableName: process.env.AZURE_STORAGE_TABLE_NAME
   });
