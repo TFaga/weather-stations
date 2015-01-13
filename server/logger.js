@@ -10,7 +10,7 @@ logger.exitOnError = false;
 logger.extend(console);
 
 var log = console.log;
-console.log = function hijacked_log(level) {
+console.log = function winstonLog(level) {
   if (arguments.length > 1 && level in this) {
     log.apply(this, arguments);
   } else {
@@ -18,6 +18,6 @@ console.log = function hijacked_log(level) {
     args.unshift('info');
     log.apply(this, args);
   }
-}
+};
 
 console.info('Logger initiated');
