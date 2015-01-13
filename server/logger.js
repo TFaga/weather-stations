@@ -1,9 +1,19 @@
-var winston = require('winston');
+var winston = require('winston'),
+    azureLogger = require('winston-azuretable').AzureLogger;
 
 var logger = module.exports = winston.loggers.get('weather');
 
 logger.remove(winston.transports.Console)
       .add(winston.transports.Console, { level: 'silly', colorize: true, handleExceptions: true });
+
+if (process.env.NODE_ENV === 'production') {
+  logger.add(azureLogger, {
+    account: process.env.AZURE_STORAGE_ACCOUNT,
+    key: process.env.AZURE_STORAGE_ACCESS_KEY,
+    level: 'silly',
+    tableName: process.env.AZURE_STORAGE_TABLE_NAME
+  });
+}
 
 logger.exitOnError = false;
 
