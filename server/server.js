@@ -1,6 +1,10 @@
-var loopback = require('loopback');
-var boot = require('loopback-boot');
+var loopback = require('loopback'),
+    boot = require('loopback-boot')
+    logger = require('./logger');
 
+console.info('Starting the application');
+
+// Load the application
 var app = module.exports = loopback();
 
 // Bootstrap the application, configure models, datasources and middleware.
@@ -11,7 +15,7 @@ app.start = function() {
   // start the web server
   return app.listen(process.env.PORT || 3000, function() {
     app.emit('started');
-    console.log('Web server listening at: %s', app.get('url'));
+    console.info('Web server listening at: %s', app.get('url'));
   });
 };
 
