@@ -18,6 +18,12 @@ module.exports = function(Station) {
 
     if (!ctx.req.accessToken) {
 
+      if (typeof ctx.args.filter == 'string') { // jshint ignore:line
+        try {
+          ctx.args.filter = JSON.parse(ctx.args.filter);
+        } catch(e) {}
+      }
+
       ctx.args.filter = ctx.args.filter || {};
 
       ctx.args.filter.limit = 1;
