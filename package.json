@@ -29,6 +29,7 @@
   "dependencies": {
     "compression": "^1.0.3",
     "errorhandler": "^1.1.1",
+    "express-winston": "^0.2.9",
     "loopback": "^2.10.0",
     "loopback-boot": "^2.6.0",
     "loopback-connector-mssql": "TFaga/loopback-connector-mssql#073c420",

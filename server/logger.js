@@ -3,7 +3,9 @@ var winston = require('winston');
 var logger = module.exports = winston.loggers.get('weather');
 
 logger.remove(winston.transports.Console)
-      .add(winston.transports.Console, { level: 'silly', colorize: true });
+      .add(winston.transports.Console, { level: 'silly', colorize: true, handleExceptions: true });
+
+logger.exitOnError = false;
 
 logger.extend(console);
 
