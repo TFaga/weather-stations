@@ -10,6 +10,9 @@ if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_T
 
   git checkout -b deploy
 
+  git add --force public
+  git commit -m "Built client"
+
   git push -fq azure deploy:master > /dev/null;
 fi
 
