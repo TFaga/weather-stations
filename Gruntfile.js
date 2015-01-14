@@ -92,8 +92,13 @@ module.exports = function (grunt) {
         },
         dist: {
           files: {
-            '.tmp/scripts/app.js': 'client/scripts/app.js',
+            '.tmp/scripts/app.js': 'client/scripts/app.js'
           },
+          options: {
+            browserifyOptions: {
+              extensions: '.jsx'
+            }
+          }
         },
         dev: {
           files: {
@@ -124,6 +129,54 @@ module.exports = function (grunt) {
           }
         }
       },
+      useminPrepare: {
+        src: '.tmp/index.html',
+        options: {
+            dest: '<%= yeoman.dist %>'
+        }
+      },
+      imagemin: {
+        dist: {
+          files: [{
+            expand: true,
+            cwd: '<%= yeoman.app %>/images',
+            src: '{,*/}*.{png,jpg,jpeg}',
+            dest: '<%= yeoman.dist %>/images'
+          }]
+        }
+      },
+      htmlmin: {
+        dist: {
+          options: {
+            //removeCommentsFromCDATA: true,
+            // https://github.com/yeoman/grunt-usemin/issues/44
+            //collapseWhitespace: true,
+            collapseBooleanAttributes: true,
+            //removeAttributeQuotes: true,
+            removeRedundantAttributes: true,
+            //useShortDoctype: true,
+            removeEmptyAttributes: true,
+            //removeOptionalTags: true
+          },
+          files: [{
+            expand: true,
+            cwd: '.tmp',
+            src: '*.html',
+            dest: '<%= yeoman.dist %>'
+          }]
+        }
+      },
+      filerev: {
+        dist: {
+          files: [{
+            src: [
+              '<%= yeoman.dist %>/scripts/**/*.js',
+              '<%= yeoman.dist %>/styles/**/*.css',
+              '<%= yeoman.dist %>/vendor/**/*.js'
+            ]
+          }]
+        }
+      },
       autoprefixer: {
         dev: {
           expand: true,
@@ -131,27 +184,48 @@ module.exports = function (grunt) {
         },
         dist: {
           expand: true,
-          src: '<%= yeoman.dist %>/styles/*.css'
+          src: '.tmp/concat/styles/*.css'
+        }
+      },
+      copy: {
+        dist: {
+          files: [{
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '<%= yeoman.dist %>',
+            src: [
+              '*.{ico,txt}',
+              'images/{,*/}*.{webp,gif}'
+            ]
+          }]
+        }
+      },
+      usemin: {
+        html: ['<%= yeoman.dist %>/{,*/}*.html'],
+        css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+        options: {
+          dirs: ['<%= yeoman.dist %>']
         }
       },
       jshint: {
-          options: {
-              jshintrc: '.jshintrc',
-              reporter: require('jshint-stylish')
-          },
-          server: [
-            'Gruntfile.js',
-            'server/{,*/}*.js'
+        options: {
+            jshintrc: '.jshintrc',
+            reporter: require('jshint-stylish')
+        },
+        server: [
+          'Gruntfile.js',
+          'server/{,*/}*.js'
+        ],
+        client: {
+          src: [
+            'client/**/*.{jsx,js}',
+            '!client/vendor/**',
           ],
-          client: {
-            src: [
-              'client/**/*.{jsx,js}',
-              '!client/vendor/**',
-            ],
-            options: {
-              jshintrc: 'client/.jshintrc'
-            }
+          options: {
+            jshintrc: 'client/.jshintrc'
           }
+        }
       }
   });
 
@@ -170,5 +244,19 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'clean:dist',
+    'targethtml',
+    'browserify:dist',
+    'compass:dist',
+    'useminPrepare',
+    'concat',
+    'autoprefixer:dist',
+    'imagemin',
+    'htmlmin',
+    'cssmin',
+    'uglify',
+    'copy',
+    'filerev',
+    'usemin'
   ]);
 };
