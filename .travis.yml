@@ -7,7 +7,12 @@ env:
   - secure: KvfZ4SY4TM79+CIIRG8bKxBFckVAtacPO+rTK88xVQ1MniViTIgF085v6yLbeKQxWluWQMK+wfW3UrpKtpw4xP6H7lWxnjm13qcdq8dO6d4dT8bYPSBhiraaqYPp4jvRIilNv7ftJFAMYhuqc7R9/kNaeb+2cAlLzSlzl5dsQxw=
 node_js:
 - '0.10'
+before_install:
+- gem install compass
+- npm install -g bower
+before_script:
+- bower install
 script:
-- npm run build
 - npm test
+- npm run build
 after_success: bash ./server/scripts/deploy.sh
