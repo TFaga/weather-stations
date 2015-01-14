@@ -1,3 +1,9 @@
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-light: 300;
+
 body {
-  font-weight: 300;
+  font-family: $font-stack;
+  font-weight: $font-light;
+  padding: 0;
+  margin: 0;
 }

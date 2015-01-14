@@ -88,7 +88,7 @@ module.exports = function (grunt) {
       },
       browserify: {
         options: {
-          transform: [['reactify', {"es6": true}]]
+          transform: [['reactify', {'es6': true}]]
         },
         dist: {
           files: {
@@ -139,12 +139,19 @@ module.exports = function (grunt) {
               jshintrc: '.jshintrc',
               reporter: require('jshint-stylish')
           },
-          all: [
-            'client/**/*.{jsx,js}',
-            '!client/vendor/**',
+          server: [
             'Gruntfile.js',
             'server/{,*/}*.js'
-          ]
+          ],
+          client: {
+            src: [
+              'client/**/*.{jsx,js}',
+              '!client/vendor/**',
+            ],
+            options: {
+              jshintrc: 'client/.jshintrc'
+            }
+          }
       }
   });
 
