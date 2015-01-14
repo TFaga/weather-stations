@@ -1,6 +1,5 @@
 {
   "initial:before": {
-    "loopback#favicon": {}
   },
   "initial": {
     "compression": {}
@@ -12,14 +11,10 @@
   "parse": {
   },
   "routes": {
-    "loopback#status": {
-      "paths": "/"
-    }
   },
   "files": {
   },
   "final": {
-    "loopback#urlNotFound": {}
   },
   "final:after": {
     "errorhandler": {}
