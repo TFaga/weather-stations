@@ -62,7 +62,7 @@ module.exports = function (grunt) {
           tasks: ['targethtml']
         },
         react: {
-          files: ['<%= yeoman.app %>/scripts/**/*.js'],
+          files: ['<%= yeoman.app %>/scripts/**/*.{jsx,js}'],
           tasks: ['browserify:dev']
         },
         compass: {
@@ -139,8 +139,10 @@ module.exports = function (grunt) {
               reporter: require('jshint-stylish')
           },
           all: [
-              'Gruntfile.js',
-              'server/{,*/}*.js'
+            'client/**/*.{jsx,js}',
+            '!client/vendor/**',
+            'Gruntfile.js',
+            'server/{,*/}*.js'
           ]
       }
   });
