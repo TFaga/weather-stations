@@ -1,0 +1,33 @@
+{
+  "name": "weather-stations",
+  "version": "1.0.0-beta.4",
+  "homepage": "https://github.com/TFaga/weather-stations",
+  "authors": [
+    "Tilen Faganel <tilen.faganel@me.com>"
+  ],
+  "description": "View detailed information from weather stations located all around Slovenia.",
+  "main": "server/server.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "weather",
+    "stations",
+    "temperature",
+    "traffic",
+    "cameras"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3"
+  }
+}
