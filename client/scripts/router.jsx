@@ -1,4 +1,18 @@
-exports.start = function() {
+var React = require('react');
+var Router = require('react-router');
+var Route = Router.Route;
+var DefaultRoute = Router.DefaultRoute;
 
-  console.log(33111);
+var Layout = require('./components/layout');
+
+var routes = (
+  <Route name="layout" path="/" handler={Layout}>
+  </Route>
+);
+
+exports.start = () => {
+
+  Router.run(routes, function (Handler) {
+    React.render(<Handler />, document.getElementById('content'));
+  });
 };
