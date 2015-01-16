@@ -3,14 +3,15 @@ var winston = require('winston'),
 
 var logger = module.exports = winston.loggers.get('weather');
 
-logger.remove(winston.transports.Console)
-      .add(winston.transports.Console, { level: 'silly', colorize: true, handleExceptions: true });
+logger.remove(winston.transports.Console);
 
 if (process.env.NODE_ENV === 'production') {
   logger.add(azureLogger, {
     level: 'silly',
     tableName: process.env.AZURE_STORAGE_TABLE_NAME
   });
+} else {
+  logger.add(winston.transports.Console, { level: 'silly', colorize: true, handleExceptions: true });
 }
 
 logger.exitOnError = false;
