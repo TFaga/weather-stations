@@ -41,6 +41,8 @@
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
+    "6to5ify": "^3.1.2",
+    "bootstrap-sass": "^3.3.1",
     "connect-livereload": "^0.5.2",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^2.1.0",
@@ -66,7 +68,6 @@
     "react": "^0.12.2",
     "react-router": "^0.11.6",
     "react-tools": "^0.12.2",
-    "reactify": "^0.17.1",
     "time-grunt": "^1.0.0"
   }
 }

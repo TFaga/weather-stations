@@ -1,15 +1,17 @@
-var React = require('react');
-var Router = require('react-router');
-var RouteHandler = Router.RouteHandler;
+import React from 'react'
+import {RouteHandler} from 'react-router'
 
-var Layout = module.exports = React.createClass({
+import Header from './header'
+
+export default React.createClass({
 
   render() {
 
     return (
       <div>
-        asdasd
+        <Header />
+        <RouteHandler />
       </div>
-    );
+    )
   }
-});
+})

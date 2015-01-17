@@ -88,7 +88,7 @@ module.exports = function (grunt) {
       },
       browserify: {
         options: {
-          transform: [['reactify', {'es6': true}]]
+          transform: ['6to5ify']
         },
         dist: {
           files: {

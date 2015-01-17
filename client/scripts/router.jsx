@@ -1,18 +1,16 @@
-var React = require('react');
-var Router = require('react-router');
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
+import React from 'react'
+import Router, {Route, DefautRoute} from 'react-router'
 
-var Layout = require('./components/layout');
+import Layout from './components/layout'
 
-var routes = (
+export const routes = (
   <Route name="layout" path="/" handler={Layout}>
   </Route>
-);
+)
 
-exports.start = () => {
+export var start = () => {
 
-  Router.run(routes, function (Handler) {
-    React.render(<Handler />, document.getElementById('content'));
-  });
-};
+  Router.run(routes, Handler => {
+    React.render(<Handler />, document.getElementById('content'))
+  })
+}
