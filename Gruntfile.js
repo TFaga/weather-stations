@@ -216,16 +216,16 @@ module.exports = function (grunt) {
         server: [
           'Gruntfile.js',
           'server/{,*/}*.js'
-        ],
-        client: {
-          src: [
-            'client/**/*.{jsx,js}',
-            '!client/vendor/**',
-          ],
-          options: {
-            jshintrc: 'client/.jshintrc'
-          }
-        }
+        ]//,
+        // client: {
+        //   src: [
+        //     'client/**/*.{jsx,js}',
+        //     '!client/vendor/**',
+        //   ],
+        //   options: {
+        //     jshintrc: 'client/.jshintrc'
+        //   }
+        // }
       }
   });
 
