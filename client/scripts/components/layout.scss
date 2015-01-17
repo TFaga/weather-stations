@@ -1,6 +1,8 @@
 $font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-light: 300;
 
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
 body {
   font-family: $font-stack;
   font-weight: $font-light;
