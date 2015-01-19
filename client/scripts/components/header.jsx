@@ -9,10 +9,13 @@ export default React.createClass({
 
     var Logo = (
       <div>
-        <span>
-          <img className="header-logo" src="images/Logo.png" />
-          <a>Vremenske postaje</a>
-        </span>
+        <div className="header-logo">
+          <img src="images/Logo.png" />
+
+        </div>
+        <div>
+          <Link to="layout">Vremenske postaje</Link>
+        </div>
       </div>
     )
 

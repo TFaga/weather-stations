@@ -1,3 +1,12 @@
-.header-logo {
-  height: 20px;
+.navbar-brand {
+  padding: 2px 15px 5px 15px;
+
+  img {
+    height: 13px;
+    margin-right: 10px;
+  }
+
+  a {
+    color: $colDefault;
+  }
 }
