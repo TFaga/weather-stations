@@ -4,12 +4,13 @@ $font-light: 300;
 $bgDefault      : #2E628A;
 $bgHighlight    : #4d87b2;
 $colDefault     : #ffffff;
-$colHighlight   : #ecdbff;
+$colHighlight   : #ffffff;
 
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import '../../../node_modules/bootflat/bootflat/scss/bootflat';
-
 @import '../../lib/theme/theme';
+
+@import 'header';
 
 body {
   font-family: $font-stack;
