@@ -66,7 +66,10 @@ module.exports = function (grunt) {
           tasks: ['browserify:dev']
         },
         compass: {
-          files: ['<%= yeoman.app %>/scripts/**/*.{scss,sass}'],
+          files: [
+            '<%= yeoman.app %>/scripts/**/*.{scss,sass}',
+            '<%= yeoman.app %>/lib/**/*.{scss,sass}'
+          ],
           tasks: ['compass:serve', 'autoprefixer:dev']
         },
         images: {

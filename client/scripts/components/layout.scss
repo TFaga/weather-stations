@@ -1,7 +1,15 @@
 $font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-light: 300;
 
+$bgDefault      : #2E628A;
+$bgHighlight    : #4d87b2;
+$colDefault     : #ffffff;
+$colHighlight   : #ecdbff;
+
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../../node_modules/bootflat/bootflat/scss/bootflat';
+
+@import '../../lib/theme/theme';
 
 body {
   font-family: $font-stack;
