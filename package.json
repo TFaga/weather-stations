@@ -45,6 +45,7 @@
     "bootstrap-sass": "^3.3.1",
     "connect-livereload": "^0.5.2",
     "grunt": "^0.4.5",
+    "grunt-6to5": "^2.0.0",
     "grunt-autoprefixer": "^2.1.0",
     "grunt-browserify": "^3.2.1",
     "grunt-cli": "^0.1.13",

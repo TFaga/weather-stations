@@ -17,6 +17,7 @@
   "trailing": true,
   "sub": true,
   "maxlen": 120,
+  "esnext": true,
   "globals": {
     "document": false
   }

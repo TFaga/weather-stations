@@ -208,6 +208,22 @@ module.exports = function (grunt) {
           dirs: ['<%= yeoman.dist %>']
         }
       },
+      '6to5': {
+        options: {
+          sourceMap: true
+        },
+        test: {
+          files: [{
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '.tmp',
+            src: [
+              'scripts/**/*.{js,jsx}',
+            ]
+          }]
+        }
+      },
       jshint: {
         options: {
             jshintrc: '.jshintrc',
@@ -216,16 +232,15 @@ module.exports = function (grunt) {
         server: [
           'Gruntfile.js',
           'server/{,*/}*.js'
-        ]//,
-        // client: {
-        //   src: [
-        //     'client/**/*.{jsx,js}',
-        //     '!client/vendor/**',
-        //   ],
-        //   options: {
-        //     jshintrc: 'client/.jshintrc'
-        //   }
-        // }
+        ],
+        client: {
+          src: [
+            '.tmp/scripts/**/*.{jsx,js}',
+          ],
+          options: {
+            jshintrc: 'client/.jshintrc'
+          }
+        }
       }
   });
 
@@ -240,6 +255,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('test', [
+    'clean:serve',
+    '6to5:test',
   	'jshint'
   ]);
 
