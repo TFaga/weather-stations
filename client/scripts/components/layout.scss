@@ -11,10 +11,18 @@ $colHighlight   : #ffffff;
 @import '../../lib/theme/theme';
 
 @import 'header';
+@import 'home/home';
+
+html {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   font-family: $font-stack;
   font-weight: $font-light;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
 }

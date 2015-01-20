@@ -1,10 +1,12 @@
 import React from 'react'
-import Router, {Route, DefautRoute} from 'react-router'
+import Router, {Route, DefaultRoute} from 'react-router'
 
 import Layout from './components/layout'
+import Home from './components/home/home'
 
 export const routes = (
   <Route name="layout" path="/" handler={Layout}>
+    <DefaultRoute handler={Home} />
   </Route>
 )
 

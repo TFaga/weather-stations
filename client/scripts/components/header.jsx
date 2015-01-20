@@ -11,7 +11,6 @@ export default React.createClass({
       <div>
         <div className="header-logo">
           <img src="images/Logo.png" />
-
         </div>
         <div>
           <Link to="layout">Vremenske postaje</Link>
