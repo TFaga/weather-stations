@@ -181,6 +181,17 @@ module.exports = function (grunt) {
         }
       },
       autoprefixer: {
+        options: {
+          browsers: [
+            'last 5 versions',
+            'ie 9',
+            'safari 6',
+            'opera 15',
+            'ios_saf 6.1',
+            'chrome 39',
+            'firefox 4'
+          ]
+        },
         dev: {
           expand: true,
           src: '.tmp/styles/*.css'
