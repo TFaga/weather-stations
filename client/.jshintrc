@@ -19,6 +19,7 @@
   "maxlen": 120,
   "esnext": true,
   "globals": {
-    "document": false
+    "document": false,
+    "google": false
   }
 }
