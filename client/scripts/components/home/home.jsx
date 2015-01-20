@@ -12,12 +12,13 @@ export default React.createClass({
 
     this.setState({ map: map });
 
+    // Load and render stations
     this.renderMarkers([{}]);
   },
 
   renderMarkers(stations) {
     stations.forEach(station => {
-      let marker1 = new MarkerWithLabel({
+      let marker = new MarkerWithLabel({
         position: new google.maps.LatLng(46.119944, 14.815333),
         map: this.state.map,
         labelContent: "$425K",
