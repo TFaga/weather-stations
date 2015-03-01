@@ -2,14 +2,6 @@
   "name": "accessToken",
   "base": "AccessToken",
   "properties": {
-    "accessTokenId": {
-      "type": "number",
-      "id": true
-    },
-    "id": {
-      "type": "string",
-      "index": { "unique": true }
-    },
     "userId": {
       "index": true
     }
