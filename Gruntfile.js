@@ -91,7 +91,7 @@ module.exports = function (grunt) {
       },
       browserify: {
         options: {
-          transform: ['6to5ify']
+          transform: ['babelify']
         },
         dist: {
           files: {
@@ -222,7 +222,7 @@ module.exports = function (grunt) {
           dirs: ['<%= yeoman.dist %>']
         }
       },
-      '6to5': {
+      babel: {
         options: {
           sourceMap: true
         },
@@ -270,7 +270,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:serve',
-    '6to5:test',
+    'babel:test',
   	'jshint'
   ]);
 
