@@ -6,7 +6,7 @@ env:
   - secure: YSHy3u4lBNiDvFsKA3VcbQHRtwpZCB+hhohCEFIBYitECrq6QkNfVV0TF5y83QMvZiY/IbZbWYLm0cHotBPgbKF8v6ulddUuojkqIg31b+52awzNb8Ni7rKiyuF36S7cNaPOIlcUfJVrqiGmeKiWA0MbrfekyFBhocsndTjgBDY=
   - secure: KvfZ4SY4TM79+CIIRG8bKxBFckVAtacPO+rTK88xVQ1MniViTIgF085v6yLbeKQxWluWQMK+wfW3UrpKtpw4xP6H7lWxnjm13qcdq8dO6d4dT8bYPSBhiraaqYPp4jvRIilNv7ftJFAMYhuqc7R9/kNaeb+2cAlLzSlzl5dsQxw=
 node_js:
-- '0.10'
+- '0.12'
 before_install:
 - gem install compass
 - npm install -g bower
