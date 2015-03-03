@@ -1,24 +1,18 @@
 import React from 'react'
 import Router, {Link} from 'react-router'
+import {FlatButton, AppBar} from 'material-ui'
 
 export default React.createClass({
 
   render() {
 
-    var Logo = (
-      <div>
-        <div className="header-logo">
-          <img src="images/Logo.png" />
-        </div>
-        <div>
-          <Link to="layout">Vremenske postaje</Link>
-        </div>
-      </div>
-    )
-
     return (
       <div>
-        <Logo />
+        <AppBar
+          className="mui-dark-theme ws-header"
+          showMenuIconButton={false}
+          title={<img src={'images/logo.png'} alt="logo" />}>
+        </AppBar>
       </div>
     )
   }

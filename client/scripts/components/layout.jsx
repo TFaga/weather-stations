@@ -11,6 +11,7 @@ export default React.createClass({
       <div>
         <Header />
         <RouteHandler />
+
       </div>
     )
   }

@@ -65,12 +65,12 @@ module.exports = function (grunt) {
           files: ['<%= yeoman.app %>/scripts/**/*.{jsx,js}'],
           tasks: ['browserify:dev']
         },
-        compass: {
+        less: {
           files: [
-            '<%= yeoman.app %>/scripts/**/*.{scss,sass}',
-            '<%= yeoman.app %>/lib/**/*.{scss,sass}'
+            '<%= yeoman.app %>/scripts/**/*.less',
+            '<%= yeoman.app %>/lib/**/*.less'
           ],
-          tasks: ['compass:serve', 'autoprefixer:dev']
+          tasks: ['less:serve', 'autoprefixer:dev']
         },
         images: {
           files: [
@@ -129,6 +129,22 @@ module.exports = function (grunt) {
         serve: {
           options: {
             debugInfo: true
+          }
+        }
+      },
+      less: {
+        serve: {
+          options: {
+            sourceMap: true,
+            sourceMapURL: 'styles/layout.css.map'
+          },
+          files: {
+            '.tmp/styles/layout.css': '<%= yeoman.app %>/scripts/components/layout.less'
+          }
+        },
+        dist: {
+          files: {
+            '.tmp/styles/layout.css': '<%= yeoman.app %>/scripts/components/layout.less'
           }
         }
       },
@@ -262,7 +278,7 @@ module.exports = function (grunt) {
     'clean:serve',
     'targethtml',
     'browserify:dev',
-    'compass:serve',
+    'less:serve',
     'autoprefixer:dev',
     'connect:livereload',
     'watch'
@@ -278,7 +294,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'targethtml',
     'browserify:dist',
-    'compass:dist',
+    'less:dist',
     'useminPrepare',
     'concat',
     'autoprefixer:dist',
